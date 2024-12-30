@@ -71,8 +71,16 @@ initdb: error: directory "/usr/local/var/postgres" exists but is not empty
 
 ### 2.2 启动 PostgreSQL 服务
 
+使用如下命令启动 PostgreSQL 服务：
+
 ```bash
 pg_ctrl -D /usr/local/var/postgres -l logfile start
+```
+
+此外，还可以使用 `brew services` 来管理 PostgreSQL 开机自启动：
+
+```bash
+brew services start postgresql@17
 ```
 
 ### 2.3 创建数据库和用户
